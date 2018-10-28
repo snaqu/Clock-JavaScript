@@ -13,6 +13,8 @@ body {
   flex: 1;
   min-height: 100vh;
   align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .clock {
@@ -36,8 +38,48 @@ body {
 
 .hand {
   width: 50%;
-  height: 6px;
+  height: 4px;
   background: black;
   position: absolute;
   top: 50%;
+}
+.dot {
+  position: absolute;
+  border-radius: 50%;
+  background-color: black;
+  width: 15px;
+  height: 15px;
+  top: 49%;
+  right: 48%;
+  z-index: 1000;
+}
+
+.second-hand {
+  transform: rotate(90deg);
+  transform-origin: 100%;
+  height: 2px;
+  background: red;
+}
+.min-hand {
+  transform: rotate(90deg);
+  transform-origin: 100%;
+  right: 50%;
+  background: transparent;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-right: 150px solid black;
+}
+.hour-hand {
+  transform: rotate(90deg);
+  transform-origin: 100%;
+  width: 30%;
+  right: 50%;
+  background: transparent;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-right: 100px solid black;
+}
+.watch {
+  font-size: 4rem;
+  color: white;
 }
